@@ -35,6 +35,7 @@ An isolated virtual network running a SIEM, a monitored Windows endpoint, and an
 - Custom **Snort rules** for network-based attacks (port scans, ICMP, brute-force)
 - **LimaCharlie + Sigma** detections forwarded into Splunk for unified EDR visibility
 - **SOC monitoring dashboard** — KPIs, attack timechart, top attacker IPs
+- **Threat-intel lookups** — a known-bad IP list enriches alerts in Splunk, tagging matching source IPs with threat type and source
 
 ---
 
@@ -63,6 +64,7 @@ Each incident is triaged and documented as a SOC ticket: **alert → investigati
 |---|----------|-----------|---------|
 | 01 | [RDP Brute-Force Attempt](incident-01-rdp-bruteforce.md) | T1110 | True Positive — No Compromise |
 | 02 | [Nmap Port Scan Detected by IDS](incident-02-nmap-portscan.md) | T1046 | True Positive — Reconnaissance |
+| 03 | [Phishing Email Analysis](incident-03-phishing-email.md) | T1566 | True Positive — Malicious Phishing |
 
 *Additional investigations added as the lab grows.*
 
@@ -76,4 +78,6 @@ Each incident is triaged and documented as a SOC ticket: **alert → investigati
 - Network detection with an IDS (Snort)
 - EDR detection with Sigma rules (LimaCharlie)
 - SOAR enrichment automation (Tines)
+- Threat-intel enrichment with Splunk lookups (known-bad IP matching)
+- Phishing email analysis (header / SPF-DKIM-DMARC, link & attachment inspection)
 - Incident documentation & MITRE ATT&CK mapping
