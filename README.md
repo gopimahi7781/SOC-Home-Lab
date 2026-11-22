@@ -70,6 +70,7 @@ Each incident is triaged and documented as a SOC ticket: **alert → investigati
 | 05 | [Nmap Scan Detected with Custom Snort Rule](incident-05-snort-scan-detection.md) | T1046 | True Positive — Reconnaissance |
 | 06 | [Web Server Attack Detection (Logs + SIEM)](incident-06-web-attack-detection.md) | T1595 / T1190 | True Positive — No Compromise |
 | 07 | [Windows Post-Breach Persistence](incident-07-windows-persistence.md) | T1136 / T1543 / T1053 / T1547 | True Positive — Contained |
+| 08 | [Linux SSH Brute-Force & Backdoor Account](incident-08-linux-ssh-attack.md) | T1110 / T1136 / T1548 | True Positive — Contained |
 
 *Additional investigations added as the lab grows.*
 
@@ -89,4 +90,5 @@ Each incident is triaged and documented as a SOC ticket: **alert → investigati
 - Snort IDS detection engineering (custom rule writing, PCAP investigation, alert tuning)
 - Web server log analysis & web attack detection (Apache access logs, SQLi / traversal / web shell / scanner signatures, SIEM ingestion into Splunk)
 - Windows endpoint threat detection (Sysmon + Security logs — account creation, service/scheduled-task/registry persistence, mapped to MITRE ATT&CK)
+- Linux endpoint threat detection (auth.log / linux_secure in Splunk — SSH brute-force, backdoor account creation, sudo privilege escalation)
 - Incident documentation & MITRE ATT&CK mapping
