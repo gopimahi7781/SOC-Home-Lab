@@ -77,6 +77,12 @@ Each incident is triaged and documented as a SOC ticket: **alert → investigati
 
 ---
 
+## Security Audit (GRC)
+
+Beyond detection, a governance/risk/compliance exercise: an internal **[Security Audit of Botium Toys](security-audit-botium-toys.md)** using the **NIST Cybersecurity Framework** — asset inventory, risk assessment, administrative/technical/physical controls assessment, and PCI DSS / GDPR compliance mapping with prioritised recommendations.
+
+---
+
 ## Skills Demonstrated
 
 - SIEM searching & detection engineering (Splunk SPL)
@@ -93,4 +99,5 @@ Each incident is triaged and documented as a SOC ticket: **alert → investigati
 - Windows endpoint threat detection (Sysmon + Security logs — account creation, service/scheduled-task/registry persistence, mapped to MITRE ATT&CK)
 - Linux endpoint threat detection (auth.log / linux_secure in Splunk — SSH brute-force, backdoor account creation, sudo privilege escalation)
 - IOC enrichment with open-source threat intelligence (AbuseIPDB, VirusTotal — IP / hash reputation, multi-source cross-validation, actionable block decisions)
+- Security auditing & GRC (NIST CSF — controls assessment, risk scoring, PCI DSS / GDPR compliance mapping)
 - Incident documentation & MITRE ATT&CK mapping
